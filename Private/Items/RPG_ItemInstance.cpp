@@ -1,19 +1,19 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Items/WC_ItemInstance.h"
+#include "Items/RPG_ItemInstance.h"
 #include "Subsystems/RPG_IdealSubsystem.h"
 #include "Kismet/GameplayStatics.h"
 
 	
-UWC_ItemInstance::UWC_ItemInstance()
+URPG_ItemInstance::URPG_ItemInstance()
 {
 }
 
 
-UWC_ItemInstance * UWC_ItemInstance::New(int ID_, int Level_, int Count_)
+URPG_ItemInstance * URPG_ItemInstance::New(int ID_, int Level_, int Count_)
 {
-	UWC_ItemInstance* new_item = NewObject<UWC_ItemInstance>();
+	URPG_ItemInstance* new_item = NewObject<URPG_ItemInstance>();
 
 	new_item->Ideal = new_item->FindIdeal(ID_);
 
@@ -26,7 +26,7 @@ UWC_ItemInstance * UWC_ItemInstance::New(int ID_, int Level_, int Count_)
 }
 
 
-const FWC_ItemIdeal * UWC_ItemInstance::FindIdeal(int ID_)
+const FRPG_ItemIdeal * URPG_ItemInstance::FindIdeal(int ID_)
 {
 	URPG_IdealSubsystem* gi = UGameplayStatics::GetGameInstance(this)->GetSubsystem<URPG_IdealSubsystem>();
 

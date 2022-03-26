@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Items/TItemStorage.h"
-#include "Items/WC_ItemInstance.h"
+#include "Items/RPG_ItemStorage.h"
+#include "Items/RPG_ItemInstance.h"
 
 template<typename T>
 const TItemMap<T>& TItemStorage<T>::GetItems()

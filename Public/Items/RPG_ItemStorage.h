@@ -3,12 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "TItemStorage.generated.h"
+#include "RPG_ItemStorage.generated.h"
 
-class UWC_ItemInstance;
+class URPG_ItemInstance;
 
 template<typename T>
-using TItemMap = TMap<UWC_ItemInstance*, T>;
+using TItemMap = TMap<URPG_ItemInstance*, T>;
 
 UINTERFACE(Blueprintable)
 class UItemStorage : public UInterface
@@ -21,8 +21,8 @@ class IItemStorage
 	GENERATED_BODY()
 
 public:
-	bool Add(UWC_ItemInstance* Item_) PURE_VIRTUAL(IItemStorage::Add,);
-	bool Remove(UWC_ItemInstance* Item_) PURE_VIRTUAL(IItemStorage::Remove);
+	bool Add(URPG_ItemInstance* Item_) PURE_VIRTUAL(IItemStorage::Add,);
+	bool Remove(URPG_ItemInstance* Item_) PURE_VIRTUAL(IItemStorage::Remove);
 };
 
 

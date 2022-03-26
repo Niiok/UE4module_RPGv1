@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Items/WC_ItemInstance.h"
-#include "WC_ItemActor.generated.h"
+#include "Items/RPG_ItemInstance.h"
+#include "RPG_ItemActor.generated.h"
 
 UCLASS()
-class RPGV1_API AWC_ItemActor : public AActor
+class RPGV1_API ARPG_ItemActor : public AActor
 {
 	GENERATED_BODY()
 	
 protected:
 	UPROPERTY(BlueprintReadOnly)
-		class UWC_ItemInstance* Item;
+		class URPG_ItemInstance* Item;
 
 	class UStaticMeshComponent* StaticMesh;
 
@@ -22,18 +22,18 @@ protected:
 
 public:	
 	// Sets default values for this actor's properties
-	AWC_ItemActor();
+	ARPG_ItemActor();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 private:
-	virtual void _SetItemInstance(class UWC_ItemInstance* Instance_);
+	virtual void _SetItemInstance(class URPG_ItemInstance* Instance_);
 
 
 public:
-	static AWC_ItemActor* New(class UWC_ItemInstance* Instance_, const FVector& Location_, const FRotator& Rotation_);
+	static ARPG_ItemActor* New(class URPG_ItemInstance* Instance_, const FVector& Location_, const FRotator& Rotation_);
 private:
-	static TQueue<AWC_ItemActor*> _Pool;
+	static TQueue<ARPG_ItemActor*> _Pool;
 };

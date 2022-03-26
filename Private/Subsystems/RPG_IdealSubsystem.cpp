@@ -22,13 +22,13 @@ void URPG_IdealSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 	//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, )
 }
 
-const FWC_CharacterIdeal * URPG_IdealSubsystem::GetCharacterIdeal(FString name) const
+const FRPG_CharacterIdeal * URPG_IdealSubsystem::GetCharacterIdeal(FString name) const
 {
-	return CharacterTable->FindRow<FWC_CharacterIdeal>(*name, TEXT(""));
+	return CharacterTable->FindRow<FRPG_CharacterIdeal>(*name, TEXT(""));
 }
 
-const FWC_ItemIdeal * URPG_IdealSubsystem::GetItemIdeal(int id) const
+const FRPG_ItemIdeal * URPG_IdealSubsystem::GetItemIdeal(int id) const
 {
-	return ItemTable->FindRow<FWC_ItemIdeal>(*FString::FromInt(id), TEXT(""));
+	return ItemTable->FindRow<FRPG_ItemIdeal>(*FString::FromInt(id), TEXT(""));
 }
 

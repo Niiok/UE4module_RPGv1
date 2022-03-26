@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "WC_ItemInstance.generated.h"
+#include "RPG_ItemInstance.generated.h"
 
 /**
  * 
  */
 UCLASS(BlueprintType)
-class RPGV1_API UWC_ItemInstance : public UObject
+class RPGV1_API URPG_ItemInstance : public UObject
 {
 	GENERATED_BODY()
 	
@@ -25,14 +25,14 @@ private:
 		int Level;
 
 private:
-	const struct FWC_ItemIdeal* Ideal;
+	const struct FRPG_ItemIdeal* Ideal;
 
 public:
-	UWC_ItemInstance();
+	URPG_ItemInstance();
 
 	UFUNCTION(BlueprintCallable)
-		static UWC_ItemInstance* New(int ID_, int Level_ = 1, int Count_ = 1);
+		static URPG_ItemInstance* New(int ID_, int Level_ = 1, int Count_ = 1);
 
 private:
-	const struct FWC_ItemIdeal* FindIdeal(int ID_);
+	const struct FRPG_ItemIdeal* FindIdeal(int ID_);
 };

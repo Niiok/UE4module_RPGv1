@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "WC_EquipmentComponent.generated.h"
+#include "RPG_EquipmentComponent.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class RPGV1_API UWC_EquipmentComponent : public UActorComponent
+class RPGV1_API URPG_EquipmentComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UWC_EquipmentComponent();
+	URPG_EquipmentComponent();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FName DefaultSocketName;

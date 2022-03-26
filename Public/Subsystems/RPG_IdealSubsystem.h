@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
-#include "WC_Struct.h"
+#include "RPG_Struct.h"
 #include "RPG_IdealSubsystem.generated.h"
 
 /**
@@ -20,8 +20,8 @@ public:
 
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	
-	const FWC_CharacterIdeal* GetCharacterIdeal(FString name) const;
-	const FWC_ItemIdeal* GetItemIdeal(int id) const;
+	const FRPG_CharacterIdeal* GetCharacterIdeal(FString name) const;
+	const FRPG_ItemIdeal* GetItemIdeal(int id) const;
 
 private:
 	UPROPERTY()

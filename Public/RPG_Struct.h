@@ -3,15 +3,15 @@
 #pragma once
 
 #include "Engine/DataTable.h"
-#include "WC_Struct.generated.h"
+#include "RPG_Struct.generated.h"
 
 USTRUCT(BlueprintType)
-struct FWC_CharacterIdeal : public FTableRowBase
+struct FRPG_CharacterIdeal : public FTableRowBase
 {
 	GENERATED_BODY()
 
 public:
-	FWC_CharacterIdeal() {}
+	FRPG_CharacterIdeal() {}
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Attribute")
 		int Level;
@@ -35,7 +35,7 @@ public:
 
 
 USTRUCT(BlueprintType)
-struct FWC_ItemIdeal : public FTableRowBase
+struct FRPG_ItemIdeal : public FTableRowBase
 {
 	GENERATED_BODY()
 

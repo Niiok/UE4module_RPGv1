@@ -5,8 +5,8 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Engine/TriggerBase.h"
-//#include "Character/WC_Player.h"
-#include "WC_EquipComponent.generated.h"
+//#include "Character/RPG_Player.h"
+#include "RPG_EquipComponent.generated.h"
 
 
 UENUM(BlueprintType)
@@ -36,18 +36,18 @@ enum class EEquipMode : uint8
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class RPGV1_API UWC_EquipComponent : public UActorComponent
+class RPGV1_API URPG_EquipComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
 
 private:
-	TArray<class AWC_ItemActor*> Equipments;// ((int)EEquipmentSlot::EnumMax);
+	TArray<class ARPG_ItemActor*> Equipments;// ((int)EEquipmentSlot::EnumMax);
 
 
 public:	
 	// Sets default values for this component's properties
-	UWC_EquipComponent();
+	URPG_EquipComponent();
 
 protected:
 	// Called when the game starts
