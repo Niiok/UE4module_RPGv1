@@ -20,7 +20,7 @@ public:
 
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	
-	const FRPG_CharacterIdeal* GetCharacterIdeal(FString name) const;
+	const FRPG_StatsIdeal* GetCharacterIdeal(FString name) const;
 	const FRPG_ItemIdeal* GetItemIdeal(int id) const;
 
 private:

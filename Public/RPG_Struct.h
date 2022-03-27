@@ -6,12 +6,12 @@
 #include "RPG_Struct.generated.h"
 
 USTRUCT(BlueprintType)
-struct FRPG_CharacterIdeal : public FTableRowBase
+struct FRPG_StatsIdeal : public FTableRowBase
 {
 	GENERATED_BODY()
 
 public:
-	FRPG_CharacterIdeal() {}
+	FRPG_StatsIdeal() {}
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Attribute")
 		int Level;
