@@ -8,26 +8,26 @@
 class URPG_ItemInstance;
 
 template<typename T>
-using TItemMap = TMap<URPG_ItemInstance*, T>;
+using TRPG_ItemMap = TMap<URPG_ItemInstance*, T>;
 
 UINTERFACE(Blueprintable)
-class UItemStorage : public UInterface
+class URPG_ItemStorage : public UInterface
 {
 	GENERATED_BODY()
 };
 
-class IItemStorage
+class IRPG_ItemStorage
 {
 	GENERATED_BODY()
 
 public:
-	bool Add(URPG_ItemInstance* Item_) PURE_VIRTUAL(IItemStorage::Add,);
-	bool Remove(URPG_ItemInstance* Item_) PURE_VIRTUAL(IItemStorage::Remove);
+	bool Add(URPG_ItemInstance* Item_) PURE_VIRTUAL(IRPG_ItemStorage::Add,);
+	bool Remove(URPG_ItemInstance* Item_) PURE_VIRTUAL(IRPG_ItemStorage::Remove);
 };
 
 
 UENUM(BlueprintType)
-enum class EItemStorageOperation : uint8
+enum class ERPG_ItemStorageOperation : uint8
 {
 	Refresh,
 	Add,
@@ -40,21 +40,21 @@ enum class EItemStorageOperation : uint8
  *
  */
 template<typename T>
-class RPGV1_API TItemStorage : public IItemStorage
+class RPGV1_API TRPG_ItemStorage : public IRPG_ItemStorage
 {
 public:
-	DECLARE_EVENT_ThreeParams(TItemStorage, FItemStorageSynchronizeSignature, IItemStorage*, EItemStorageOperation, T);
+	DECLARE_EVENT_ThreeParams(TRPG_ItemStorage, FItemStorageSynchronizeSignature, IRPG_ItemStorage*, ERPG_ItemStorageOperation, T);
 	FItemStorageSynchronizeSignature OnSynchronize;
 
 protected:
 	UPROPERTY(SaveGame)
-		TItemMap<T> Items;
+		TRPG_ItemMap<T> ItemMap;
 public:
-	const TItemMap<T>& GetItems();
+	const TRPG_ItemMap<T>& GetItemMap();
 
 public:
-	TItemStorage();
-	~TItemStorage();
+	TRPG_ItemStorage();
+	~TRPG_ItemStorage();
 
 
 };

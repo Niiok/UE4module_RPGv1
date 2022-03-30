@@ -4,11 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "Items/RPG_ItemStorage.h"
 #include "RPG_InventoryInterface.generated.h"
 
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
-class URPG_InventoryInterface : public UInterface
+class URPG_InventoryInterface : public URPG_ItemStorage
 {
 	GENERATED_BODY()
 };

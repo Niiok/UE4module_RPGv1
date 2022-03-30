@@ -5,17 +5,17 @@
 #include "Items/RPG_ItemInstance.h"
 
 template<typename T>
-const TItemMap<T>& TItemStorage<T>::GetItems()
+const TRPG_ItemMap<T>& TRPG_ItemStorage<T>::GetItemMap()
 {
-	return Items;
+	return ItemMap;
 }
 
 template<typename T>
-TItemStorage<T>::TItemStorage()
+TRPG_ItemStorage<T>::TRPG_ItemStorage()
 {
 }
 
 template<typename T>
-TItemStorage<T>::~TItemStorage()
+TRPG_ItemStorage<T>::~TRPG_ItemStorage()
 {
 }
