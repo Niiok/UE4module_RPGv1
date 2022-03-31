@@ -20,12 +20,12 @@ public:
 
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	
-	const FRPG_StatsIdeal* GetCharacterIdeal(FString name) const;
+	const FRPG_StatsIdeal* GetStatsIdeal(FString name) const;
 	const FRPG_ItemIdeal* GetItemIdeal(int id) const;
 
 private:
 	UPROPERTY()
-		const class UDataTable* CharacterTable;
+		const class UDataTable* StatsTable;
 	UPROPERTY()
 		const class UDataTable* ItemTable;
 };
